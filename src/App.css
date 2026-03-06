@@ -1,0 +1,258 @@
+html {
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(90deg, #8a64ff 0%, #55d7e7 100%);
+  background-attachment: fixed;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 22px 64px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.topbar__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  text-decoration: none;
+}
+
+.brand__badge {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #e9e9f2;
+  background: radial-gradient(circle at 30% 20%, #111 0%, #020217 55%, #000 100%);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav__link {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  font-size: 14px;
+}
+
+.nav__link:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.hero {
+  margin-top: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 22px;
+  align-items: center;
+  padding: 34px 34px;
+}
+
+.hero__title {
+  font-size: clamp(44px, 5vw, 64px);
+  line-height: 0.95;
+  margin: 0 0 14px;
+  color: rgba(20, 12, 40, 0.85);
+}
+
+.hero__subtitle {
+  margin: 0;
+  max-width: 460px;
+  font-size: 20px;
+  line-height: 1.35;
+  color: rgba(20, 12, 40, 0.7);
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.social__link {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.45);
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 800;
+}
+
+.photo-card {
+  border-radius: 36px;
+  background: #000;
+  padding: 18px;
+  width: min(420px, 100%);
+  margin-left: auto;
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.25);
+}
+
+.photo-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 26px;
+}
+
+.section-title {
+  margin: 34px 0 16px;
+  font-size: 18px;
+  letter-spacing: 1.4px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.projetos {
+  padding: 10px 0 10px;
+}
+
+.projetos .container-projetos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.projetos .projeto {
+  position: relative;
+  display: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+}
+
+.projetos .projeto.ativo {
+  display: block;
+}
+
+.projetos .projeto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.projetos .projeto h3 {
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  margin: 0;
+  padding: 12px 14px;
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.projetos .projeto .informacoes-projeto {
+  background: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.25s;
+  padding: 16px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto {
+  opacity: 1;
+}
+
+.projetos .btn-mostrar-projetos {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  width: 180px;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 12px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.projetos .btn-mostrar-projetos:hover {
+  background: rgba(255, 255, 255, 0.65);
+  transition: 0.2s;
+}
+
+.projetos .btn-mostrar-projetos.remover {
+  display: none;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
