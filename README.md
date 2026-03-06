@@ -1,16 +1,79 @@
-# React + Vite
+ # Meu Portfólio (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page / portfólio pessoal desenvolvido em **React** com **Vite**, com layout inspirado no protótipo do projeto.
 
-Currently, two official plugins are available:
+## Visão geral
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Seção de destaque (hero) com apresentação e links sociais
+- Seção de projetos com cards e botão de “mostrar mais”
+- Layout responsivo (desktop e mobile)
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React**
+- **Vite**
+- **JavaScript (ESM)**
+- **CSS**
+- **ESLint**
 
-## Expanding the ESLint configuration
+## Como rodar o projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Pré-requisitos:
+
+- **Node.js** (recomendado: LTS)
+- **npm**
+
+Instalação e execução:
+
+```bash
+npm install
+npm run dev
+```
+
+Depois, acesse a URL exibida no terminal (ex.: `http://localhost:5173`).
+
+## Scripts úteis
+
+```bash
+npm run dev
+npm run build
+npm run preview
+```
+
+## Estrutura do projeto
+
+```text
+meu-novo-portifolio/
+  public/
+  src/
+    assets/           # Imagens e recursos estáticos (foto, logos, thumbnails)
+    App.jsx           # Página principal (hero + projetos)
+    App.css           # Estilos do layout
+    main.jsx          # Entry-point do React
+    index.css         # Estilos globais
+  index.html
+  vite.config.js
+  package.json
+```
+
+## Prints / Demonstração
+
+Vou anexar prints na página do GitHub.
+
+Sugestão de organização no repositório:
+
+```text
+docs/
+  prints/
+    home.png
+    projetos.png
+    mobile.png
+```
+
+E depois referenciar aqui assim:
+
+```md
+![Home](docs/prints/home.png)
+![Projetos](docs/prints/projetos.png)
+![Mobile](docs/prints/mobile.png)
+```
