@@ -58,22 +58,8 @@ meu-novo-portifolio/
 
 ## Prints / Demonstração
 
-Vou anexar prints na página do GitHub.
+- Prototipo de Alta Fidelidade
+<img width="1257" height="710" alt="PROTOTIPO" src="https://github.com/user-attachments/assets/b87a9b84-992d-4c33-90e7-01fb6e9650c8" />
+- Resultado obtido
+<img width="822" height="768" alt="image" src="https://github.com/user-attachments/assets/c7735a26-ef1e-4617-81ee-87b734077d95" />
 
-Sugestão de organização no repositório:
-
-```text
-docs/
-  prints/
-    home.png
-    projetos.png
-    mobile.png
-```
-
-E depois referenciar aqui assim:
-
-```md
-![Home](docs/prints/home.png)
-![Projetos](docs/prints/projetos.png)
-![Mobile](docs/prints/mobile.png)
-```
